@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Ychange/static/css/main.24b139fa.css",
-    "main.js": "/Ychange/static/js/main.41fad169.js",
+    "main.js": "/Ychange/static/js/main.88307a60.js",
     "static/media/Inter_18pt-SemiBold.ttf": "/Ychange/static/media/Inter_18pt-SemiBold.d52a01d17b566af4e096.ttf",
     "static/media/Inter_18pt-Regular.ttf": "/Ychange/static/media/Inter_18pt-Regular.86c330c66f7333ff6202.ttf",
     "index.html": "/Ychange/index.html",
     "main.24b139fa.css.map": "/Ychange/static/css/main.24b139fa.css.map",
-    "main.41fad169.js.map": "/Ychange/static/js/main.41fad169.js.map"
+    "main.88307a60.js.map": "/Ychange/static/js/main.88307a60.js.map"
   },
   "entrypoints": [
     "static/css/main.24b139fa.css",
-    "static/js/main.41fad169.js"
+    "static/js/main.88307a60.js"
   ]
 }
