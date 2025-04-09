@@ -22,9 +22,9 @@ function Home() {
         <div className={stylesHome.section2} id='sect2'>
             <div className="course">
                 <Graphic open={open} setOpen={setOpen}/>
-                {open && [
+                <div className={open ? 'graphicm active' : 'graphicm unactive'}>
                     <GraphicModal open={open} setOpen={setOpen} />
-                ]}
+                </div>
                 <Changer />
             </div>
             <Calculator />

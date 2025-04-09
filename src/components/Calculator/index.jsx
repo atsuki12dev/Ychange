@@ -114,31 +114,27 @@ function Calculator() {
             <input type="text" placeholder="0" ref={RefInp1}/>
             <button onClick={() => setFirst(!First)}>{val1}</button>
         </div>
-        {First && [
-            <div className='list1' >
-                <p onClick={() => [setVal1('RUB'), setFirst(false)]}>RUB</p>
-                <p onClick={() => [setVal1('USD'), setFirst(false)]}>USD</p>
-                <p onClick={() => [setVal1('JPY'), setFirst(false)]}>JPY</p>
-                <p onClick={() => [setVal1('EUR'), setFirst(false)]}>EUR</p>
-                <p onClick={() => [setVal1('GBP'), setFirst(false)]}>GBP</p>
-            </div>
-        ]}
+        <div className={First ? 'list1 active' : 'list1 unactive'} >
+            <p onClick={() => [setVal1('RUB'), setFirst(false)]}>RUB</p>
+            <p onClick={() => [setVal1('USD'), setFirst(false)]}>USD</p>
+            <p onClick={() => [setVal1('JPY'), setFirst(false)]}>JPY</p>
+            <p onClick={() => [setVal1('EUR'), setFirst(false)]}>EUR</p>
+            <p onClick={() => [setVal1('GBP'), setFirst(false)]}>GBP</p>
+        </div>
         
-        <img src="/assets/img/Change.png" alt="change.png" onClick={() => trade(val1, val2)}/>
+        <img src="./assets/img/Change.png" alt="change.png" onClick={() => trade(val1, val2)}/>
 
         <div className="inp1">
             <input type="text" placeholder="0" ref={RefInp2}/>
             <button onClick={() => setSecond(!Second)}>{val2}</button>
         </div>
-        {Second && [
-            <div className='list2'>
-                <p onClick={() => [setVal2('RUB'), setSecond(false)]}>RUB</p>
-                <p onClick={() => [setVal2('USD'), setSecond(false)]}>USD</p>
-                <p onClick={() => [setVal2('JPY'), setSecond(false)]}>JPY</p>
-                <p onClick={() => [setVal2('EUR'), setSecond(false)]}>EUR</p>
-                <p onClick={() => [setVal2('GBP'), setSecond(false)]}>GBP</p>
-            </div>
-        ]}
+        <div className={Second ? 'list2 active' : 'list2 unactive'}>
+            <p onClick={() => [setVal2('RUB'), setSecond(false)]}>RUB</p>
+            <p onClick={() => [setVal2('USD'), setSecond(false)]}>USD</p>
+            <p onClick={() => [setVal2('JPY'), setSecond(false)]}>JPY</p>
+            <p onClick={() => [setVal2('EUR'), setSecond(false)]}>EUR</p>
+            <p onClick={() => [setVal2('GBP'), setSecond(false)]}>GBP</p>
+        </div>
     </div>
     )
 }

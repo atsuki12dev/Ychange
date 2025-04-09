@@ -7,7 +7,7 @@ function GraphicModal({open, setOpen}) {
     <div className={style.root}>
         <div className="row1">
             <h1>Курс Центрального Банка</h1>
-            <img src="./assets/img/крестик.png" onClick={() => setOpen(!open)}/>
+            <img src="./assets/img/Крестик.png" onClick={() => setOpen(!open)}/>
         </div>
         <div className="row2">
             <div className="course">

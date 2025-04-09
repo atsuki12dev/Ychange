@@ -13,10 +13,10 @@ function Header({profile, setProfile}) {
         <div className="logo-nav">
             <img src="./assets/img/Логотип.svg" alt="logo.svg" />
             <div className="nav">
-                <Link to="/">
+                <Link to="/Ychange/">
                   <p>конвертер</p>
                 </Link>
-                <Link to="/change">
+                <Link to="/Ychange/change">
                   <p>курс-валют</p>
                 </Link>
                 <img src="./assets/img/menu.png" alt="menu" onClick={() => setList1(!list1)}/>
@@ -30,10 +30,10 @@ function Header({profile, setProfile}) {
         </div>
         {list1 && [
           <div className="menu-List1">
-            <Link to="/">
+            <Link to="/Ychange/">
               <p onClick={() => setList2(!list2)}>Конвертер</p>
             </Link>
-            <Link to="/change">
+            <Link to="/Ychange/change">
               <p onClick={() => setList3(!list3)}>Курс-валют</p>
             </Link>
           </div>

@@ -17,20 +17,18 @@ function App() {
   return (
     <div className="container">
         <Header profile={profile} setProfile={setProfile}/>
-        {
-          profile && [
-            <Profile profile={profile} setProfile={setProfile}/>
-          ]
-        }
+        <div className={profile ? 'profile active' : 'profile unactive'}>
+          <Profile profile={profile} setProfile={setProfile}/>
+        </div>
         <div className="wrapper">
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/change" element={<Change />} />
+            <Route path="/Ychange/" element={<Home />} />
+            <Route path="/Ychange/change" element={<Change />} />
         </Routes>
         </div>
-        {open && [
+        <div className={open ? 'feedback active' : 'feedback unactive'}>
           <FeedbackModal />
-        ]}
+        </div>
         <Footer open={open} setOpen={setOpen}/>
     </div>
   );

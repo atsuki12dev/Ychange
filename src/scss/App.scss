@@ -5,12 +5,24 @@
     width: 1440px;
     margin: auto;
 
+    .profile.active{
+        display: block;
+    }
+    .profile.unactive{
+        display: none;
+    }
     .wrapper{
         margin: auto;
         width: 1140px;
         margin-top: 50px;
         background-color: #CAF0F8;
         padding: 40px 40px 0 40px;
+    }
+    .feedback.active{
+        display: block;
+    }
+    .feedback.unactive{
+        display: none;
     }
 }
 
