@@ -1,0 +1,93 @@
+.root{
+    :global{
+        width: 1070px;
+        height: 190px;
+        background-color: #fff;
+        padding: 20px;
+        column-gap: 20px;
+        row-gap: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 0px 4px 5px gray;
+        margin-bottom: 100px;
+
+        .country{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            img{
+                width: 60px;
+                height: 60px;
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                width: 230px;
+
+                h1{
+                    font-family: 'ISB';
+                    font-size: 24px;
+                }
+                p{
+                    font-family: 'IR';
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 584px;
+            gap: 17px;
+
+            .country{
+                gap: 5px;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                .text{
+                    width: 110px;
+
+                    h1{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 390px){
+    .root{
+        :global{
+            width: 280px;
+            height: 450px;
+            gap: 20px;
+
+            .country{
+                gap: 5px;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                .text{
+                    width: 190px;
+
+                    h1{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

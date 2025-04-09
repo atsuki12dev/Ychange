@@ -1,0 +1,146 @@
+.root{
+    :global{
+        display: flex;
+        flex-direction: column;
+
+        .chan-wrapp{
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 5px gray;
+
+            .row1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .nav{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    button{
+                        margin: 0;
+                        border: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(#fff, 0%);
+                        font-family: 'ISB';
+                        font-size: 20px;
+                        color: black;
+                        box-shadow: none;
+                    }
+                    button.active{
+                        text-shadow: 0 2px 3px gray;
+                    }
+                }
+                .balance{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+
+                    p{
+                        font-family: 'ISB';
+                        font-size: 20px;
+                    }
+                }
+            }
+            .row2{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-top: 15px;
+
+                input{
+                    width: 640px;
+                    height: 45px;
+                    border: 0;
+                    border-radius: 40px;
+                    background-color: #E3E3E3;
+                    padding: 10px;
+                    font-family: 'IR';
+                    font-size: 20px;
+                }
+                button{
+                    margin: 0;
+                    border: 0;
+                    margin-top: 10px;
+                    width: 45px;
+                    height: 25px;
+                    background-color: rgb(#fff, 0%);
+                    font-family: 'ISB';
+                    font-size: 20px;
+                    margin-left: -75px;
+                    color: black;
+                    box-shadow: none;
+                }
+                img{
+                    width: 45px;
+                    height: 45px;
+                    margin-left: 20px;
+                }
+            }
+        }
+        button{
+            margin-top: 25px;
+            width: 160px;
+            height: 40px;
+            margin-left: 600px;
+            border: 0;
+            border-radius: 20px;
+            background-color: #00B4D8;
+            color: #fff;
+            font-family: 'ISB';
+            font-size: 24px;
+            box-shadow: 0px 4px 5px gray;
+        }
+        button:active{
+            border: 3px solid #3de8ff;
+            box-shadow: none;
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 584px;
+            
+            button{
+                margin-left: 423px;
+            }
+        }
+    }
+}
+@media (max-width: 390px){
+    .root{
+        :global{
+            width: 322px;
+
+            .chan-wrapp{
+                .row1{
+                    .nav{
+                        button{
+                            font-size: 14px;
+                        }
+                    }
+                    .balance{
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .row2{
+                    input{
+                        width: 226px;
+                    }
+                }
+            }
+            button{
+                margin-left: 156px;
+            }
+        }
+    }
+}

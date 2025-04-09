@@ -1,0 +1,43 @@
+.section1{
+    :global{
+        display: flex;
+        flex-direction: row;
+        gap: 120px;
+        align-items: center;
+    }
+}
+.section2{
+    :global{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+
+        .course{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    } 
+}
+
+@media (max-width: 744px){
+    .section1{
+        :global{
+            gap: 29px;
+        }
+    }
+    .section2{
+        :global{
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 390px){
+    .section1{
+        :global{
+            flex-direction: column;
+        }
+    }
+}

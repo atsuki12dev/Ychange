@@ -1,0 +1,174 @@
+.root{
+    :global{
+        position: absolute;
+        width: 700px;
+        height: 325px;
+        background-color: #fff;
+        border: 0;
+        border-radius: 20px;
+        margin-left: 0;
+        margin-top: 65px;
+        box-shadow: 0px 4px 10px gray;
+        padding: 22px 24px 22px 24px;
+
+        .row1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            h1{
+                font-family: 'ISB';
+                font-size: 20px;
+            }
+            img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+        .row2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            .course{
+                height: 44px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+
+                p{
+                    font-family: 'ISB';
+                    font-size: 20px;
+                }
+            }
+            .data{
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                align-items: end;
+                margin-bottom: 5px;
+
+                p{
+                    font-family: 'IR';
+                    font-size: 12px;
+                } 
+            }
+        }
+        .line{
+            width: 652px;
+            height: 2px;
+            background-color: #90E0EF;
+        }
+        .row3{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+
+            .GraphNum{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 156px;
+                gap: 20px;
+
+                p{
+                    font-family: 'IR';
+                    font-size: 16px;
+                }
+            }
+            img{
+                width: 607px;
+                height: 115px;
+                margin-top: 20px;
+            }
+        }
+        .row4{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            height: 39px;
+            margin-left: 37px;
+            margin-top: -15px;
+
+            p{
+                font-family: 'IR';
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 582px;
+
+            .row3{
+                img{
+                    width: 504px;
+                }
+            }
+            .line{
+                width: 542px;
+            }
+            .row4{
+                margin-left: 20px;
+                gap: 8px;
+            }
+        }
+    }
+}
+@media (max-width: 390px){
+    .root{
+        :global{
+            padding: 20px 10px 10px 10px;
+            width: 332px;
+
+            .row1{
+                h1{
+                    font-size: 16px;
+                }
+            }
+            .row2{
+                .course{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .data{
+                    p{
+                        font-size: 8px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .line{
+                width: 309px;
+            }
+            .row3{
+                .GraphNum{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                img{
+                    width: 287px;
+                }
+            }
+            .row4{
+                margin-left: 20px;
+                gap: 3px;
+
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

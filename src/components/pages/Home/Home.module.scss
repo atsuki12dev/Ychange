@@ -1,0 +1,62 @@
+.section1{
+    :global{
+        display: flex;
+        flex-direction: row;
+        gap: 120px;
+    }
+}
+.section2{
+    :global{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+
+        .course{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    } 
+}
+.section3{
+    :global{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        
+        .title{
+            h1{
+                font-family: 'ISB';
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .section1{
+        :global{
+            gap: 29px;
+        }
+    }
+}
+@media (max-width: 390px){
+    .section1{
+        :global{
+            flex-direction: column;
+        }
+    }
+    .section2{
+        :global{
+            margin-top: 316px;
+        }
+    }
+    .section3{
+        :global{
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+    }
+}

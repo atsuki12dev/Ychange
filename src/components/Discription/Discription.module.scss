@@ -1,0 +1,37 @@
+.root{
+    :global{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        h1{
+            font-family: 'ISB';
+            font-size: 24px;
+        }
+        p{
+            font-family: 'IR';
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 355px;
+        }
+    }
+}
+@media (max-width: 390px){
+    .root{
+        :global{
+            width: 328px;
+            h1{
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;    
+            }
+        }
+    }
+}

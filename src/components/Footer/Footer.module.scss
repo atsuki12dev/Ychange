@@ -1,0 +1,131 @@
+.root{
+    :global{
+        width: 1140px;
+        margin: auto;
+        background-color: #0077B6;
+        padding: 30px 25px 30px 25px; 
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 50px;
+
+        .row1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .logo{
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                align-items: center;
+
+                img{
+                    width: 120px;
+                    height: 70px;
+                }
+                p{
+                    font-family: 'ISB';
+                    font-size: 32px;
+                    color: #fff;
+                }
+            }
+            .contacts{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 10px;
+                width: 58px;
+                height: 58px;
+                margin-right: 170px;
+
+                img:active{
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+        .row2{
+            margin-top: 20px;
+
+            p{
+                font-family: 'ISB';
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+        .row3{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            align-items: end;
+            justify-content: space-between;
+
+            p{
+                font-family: 'IR';
+                font-size: 16px;
+                color: #fff;
+            }
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 645px;
+
+            .row1{
+                .logo{
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 390px){
+    .root{
+        :global{
+            width: 360px;
+
+            .row1{
+                gap: 15px;
+
+                .logo{
+                    img{
+                        width: 47px;
+                    }
+                    p{
+                        font-size: 24px;
+                        text-wrap: nowrap;
+                    }
+                }
+                .contacts{
+                    margin-top: 20px;
+                    gap: 5px;
+                    img{
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+            }
+            .row2{
+                margin-top: 10px;
+                p{
+                    font-size: 12px;
+                }
+            }
+            .row3{
+                p{
+                    font-size: 12px;
+                }
+                img{
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.root{
+    :global{
+        width: 250px;
+        height: 250px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 0px 4px 5px gray;
+        padding: 15px;
+
+        p{
+            font-family: 'ISB';
+            font-size: 24px;
+        }
+        .inp1{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 15px;
+            align-items: center;
+
+            input{ 
+                display: flex;
+                align-items: center;
+                border: 0;
+                border-radius: 20px;
+                background-color: #00B4D8;
+                font-family: 'ISB';
+                font-size: 24px;
+                width: 100px;
+                padding-left: 17px;
+                height: 45px;
+                color: #fff;
+            }
+            input::placeholder{
+                color: #fff;
+            }
+            input:focus{
+                width: 160px;
+                transition: width 0.3s;
+                color: #fff;
+            }
+            button{
+                width: 50px;
+                height: 30px;
+                border: 0;
+                background-color: rgb(#fff, 0%);
+                font-family: 'ISB';
+                font-size: 24px;
+            }
+        }
+        .list1{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-left: 255px;
+            margin-top: -150px;
+            align-items: center;
+            background-color: #fff;
+            width: 100px;
+            padding: 10px;
+            border: 0;
+            border-radius: 20px 0 20px 0;
+            box-shadow: 0px 4px 5px gray;
+
+            p{
+                font-family: 'ISB';
+                font-size: 20px;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+        .list2{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-left: 255px;
+            margin-top: 230px;
+            align-items: center;
+            background-color: #fff;
+            width: 100px;
+            padding: 10px;
+            border: 0;
+            border-radius: 20px 0 20px 0;
+            box-shadow: 0px 4px 5px gray;
+
+            p{
+                font-family: 'ISB';
+                font-size: 20px;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            margin-top: 15px;
+            margin-left: 60px;
+            cursor: pointer;
+        }
+    } 
+}
+
+@media (max-width: 744px){
+    .root{
+        :global{
+            width: 200px;
+            position: absolute;
+            margin-top: -193px;
+            margin-left: 364px;
+
+            .inp1{
+                input:focus{
+                    width: 100px;
+                }
+            }
+            .list1{
+                margin-left: 170px;
+            }
+            .list2{
+                margin-left: 170px;
+            }
+        }
+    }
+}
+@media (max-width: 390px){
+    .root{
+        :global{
+            margin-left: 70px;
+            margin-top: -280px;
+        }
+    }
+}
