@@ -17,6 +17,13 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+
+            .graphicm.unactive{
+                display: none;
+            }
+            .graphicm.active{
+                display: block;
+            }
         }
     } 
 }

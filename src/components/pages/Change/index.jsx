@@ -8,9 +8,7 @@ import GraphicModal from '../../GraphicModal';
 
 import stylesChange from './Change.module.scss';
 
-function Change() {
-  const [open, setOpen] = React.useState(false);
-
+function Change({graphicOpen, setGraphicOpen}) {
   return (
     <>
       <div className={stylesChange.section1} id='sect4'>
@@ -19,10 +17,10 @@ function Change() {
       </div>
       <div className={stylesChange.section2} id='sect5'>
           <div className="course">
-            <Graphic open={open} setOpen={setOpen}/>
-            {open && [
-                <GraphicModal open={open} setOpen={setOpen}/>
-            ]}
+            <Graphic graphicOpen={graphicOpen} setGraphicOpen={setGraphicOpen}/>
+            <div className={graphicOpen ? 'graphicm active' : 'graphicm unactive'}>
+                <GraphicModal graphicOpen={graphicOpen} setGraphicOpen={setGraphicOpen}/>
+            </div>
           </div>
       </div>
       <div className="section6" id='sect6'>

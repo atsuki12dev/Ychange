@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 
 import stylesHeader from './Header.module.scss';
 
-function Header({profile, setProfile}) {
-  const [list1, setList1] = React.useState(false);
-  const [list2, setList2] = React.useState(false);
-  const [list3, setList3] = React.useState(false);
+function Header({profileOpen, setProfileOpen, list1Open, setList1Open, list2Open, setList2Open, list3Open, setList3Open}) {
+  
 
   return (
     <header className={stylesHeader.root}>
@@ -19,33 +17,33 @@ function Header({profile, setProfile}) {
                 <Link to="/Ychange/change">
                   <p>курс-валют</p>
                 </Link>
-                <img src="./assets/img/menu.png" alt="menu" onClick={() => setList1(!list1)}/>
+                <img src="./assets/img/menu.png" alt="menu" onClick={() => setList1Open(!list1Open)}/>
             </div>
         </div>
         <div className="profile" 
-          onClick={() => setProfile(!profile)}
+          onClick={() => setProfileOpen(!profileOpen)}
         >
             <img src="./assets/img/Profile.png" alt="profile.png" />
             <p>ID</p>
         </div>
-        {list1 && [
+        {list1Open && [
           <div className="menu-List1">
             <Link to="/Ychange/">
-              <p onClick={() => setList2(!list2)}>Конвертер</p>
+              <p onClick={() => setList2Open(!list2Open)}>Конвертер</p>
             </Link>
             <Link to="/Ychange/change">
-              <p onClick={() => setList3(!list3)}>Курс-валют</p>
+              <p onClick={() => setList3Open(!list3Open)}>Курс-валют</p>
             </Link>
           </div>
         ]}
-        {list1 && list2 && [
+        {list1Open && list2Open && [
           <div className="menu-List2">
             <a href="#sect1"><p>Выбор города</p></a>
             <a href="#sect2"><p>График</p></a>
             <a href="#sect3"><p>Популярное</p></a>
           </div>
         ]}
-        {list1 && list3 && [
+        {list1Open && list3Open && [
           <div className="menu-List3">
             <a href="#sect4"><p>Выбор города</p></a>
             <a href="#sect5"><p>График</p></a>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from './Profile.module.scss';
 
-function Profile({profile, setProfile}) {
+function Profile({profileOpen, setProfileOpen}) {
   return (
     <div className={style.root}>
         <div className="content">
@@ -11,7 +11,7 @@ function Profile({profile, setProfile}) {
             <p>Вход через банковские ID сэкономит <br/>время — данные в анкете заполнятся <br/>автоматически. Это быстро и <br/>безопасно</p>
           </div>
           <img src='./assets/img/Крестик.png' 
-            onClick={() => setProfile(!profile)}
+            onClick={() => setProfileOpen(!profileOpen)}
           />
         </div>
         <div className="banksid">

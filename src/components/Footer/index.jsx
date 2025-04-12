@@ -2,7 +2,7 @@ import React from 'react';
 
 import stylesFooter from './Footer.module.scss';
 
-function Footer({open, setOpen}) {
+function Footer({feedbackOpen, setFeedbackOpen}) {
   return (
     <footer className={stylesFooter.root}>
         <div className="row1">
@@ -13,7 +13,7 @@ function Footer({open, setOpen}) {
             <div className="contacts">
                 <img src="./assets/img/ТГ.svg" alt="telegram.svg" />
                 <img src="./assets/img/ВК.svg" alt="vk.svg" />
-                <img src="./assets/img/help.png" alt="help.png" onClick={() => setOpen(!open)}/>
+                <img src="./assets/img/help.png" alt="help.png" onClick={() => setFeedbackOpen(!feedbackOpen)}/>
             </div>
         </div>
         <div className="row2">

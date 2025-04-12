@@ -1,15 +1,7 @@
 import React from 'react';
 import stylesCalculator from './Calculator.module.scss';
 
-function Calculator() {
-  const [First, setFirst] = React.useState(false);
-  const [Second, setSecond] = React.useState(false);
-
-  const RefInp1 = React.useRef();
-  const RefInp2 = React.useRef();
-
-  const [val1, setVal1] = React.useState('RUB');
-  const [val2, setVal2] = React.useState('USD');
+function Calculator({calculatorList1Open, setCalculatorList1Open, calculatorList2Open, setCalculatorList2Open, RefInp1, RefInp2, calculatorVal1, setCalculatorVal1, calculatorVal2, setCalculatorVal2}) {
 
   function trade(v1, v2){
     switch (v1){
@@ -112,28 +104,28 @@ function Calculator() {
 
         <div className="inp1">
             <input type="text" placeholder="0" ref={RefInp1}/>
-            <button onClick={() => setFirst(!First)}>{val1}</button>
+            <button onClick={() => setCalculatorList1Open(!calculatorList1Open)}>{calculatorVal1}</button>
         </div>
-        <div className={First ? 'list1 active' : 'list1 unactive'} >
-            <p onClick={() => [setVal1('RUB'), setFirst(false)]}>RUB</p>
-            <p onClick={() => [setVal1('USD'), setFirst(false)]}>USD</p>
-            <p onClick={() => [setVal1('JPY'), setFirst(false)]}>JPY</p>
-            <p onClick={() => [setVal1('EUR'), setFirst(false)]}>EUR</p>
-            <p onClick={() => [setVal1('GBP'), setFirst(false)]}>GBP</p>
+        <div className={calculatorList1Open ? 'list1 active' : 'list1 unactive'} >
+            <p onClick={() => [setCalculatorVal1('RUB'), setCalculatorList1Open(false)]}>RUB</p>
+            <p onClick={() => [setCalculatorVal1('USD'), setCalculatorList1Open(false)]}>USD</p>
+            <p onClick={() => [setCalculatorVal1('JPY'), setCalculatorList1Open(false)]}>JPY</p>
+            <p onClick={() => [setCalculatorVal1('EUR'), setCalculatorList1Open(false)]}>EUR</p>
+            <p onClick={() => [setCalculatorVal1('GBP'), setCalculatorList1Open(false)]}>GBP</p>
         </div>
         
-        <img src="./assets/img/Change.png" alt="change.png" onClick={() => trade(val1, val2)}/>
+        <img src="./assets/img/Change.png" alt="change.png" onClick={() => trade(calculatorVal1, calculatorVal2)}/>
 
         <div className="inp1">
             <input type="text" placeholder="0" ref={RefInp2}/>
-            <button onClick={() => setSecond(!Second)}>{val2}</button>
+            <button onClick={() => setCalculatorList2Open(!calculatorList2Open)}>{calculatorVal2}</button>
         </div>
-        <div className={Second ? 'list2 active' : 'list2 unactive'}>
-            <p onClick={() => [setVal2('RUB'), setSecond(false)]}>RUB</p>
-            <p onClick={() => [setVal2('USD'), setSecond(false)]}>USD</p>
-            <p onClick={() => [setVal2('JPY'), setSecond(false)]}>JPY</p>
-            <p onClick={() => [setVal2('EUR'), setSecond(false)]}>EUR</p>
-            <p onClick={() => [setVal2('GBP'), setSecond(false)]}>GBP</p>
+        <div className={calculatorList2Open ? 'list2 active' : 'list2 unactive'}>
+            <p onClick={() => [setCalculatorVal2('RUB'), setCalculatorList2Open(false)]}>RUB</p>
+            <p onClick={() => [setCalculatorVal2('USD'), setCalculatorList2Open(false)]}>USD</p>
+            <p onClick={() => [setCalculatorVal2('JPY'), setCalculatorList2Open(false)]}>JPY</p>
+            <p onClick={() => [setCalculatorVal2('EUR'), setCalculatorList2Open(false)]}>EUR</p>
+            <p onClick={() => [setCalculatorVal2('GBP'), setCalculatorList2Open(false)]}>GBP</p>
         </div>
     </div>
     )

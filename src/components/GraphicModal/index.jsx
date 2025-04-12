@@ -2,12 +2,12 @@ import React from 'react';
 
 import style from './GraphicModal.module.scss';
 
-function GraphicModal({open, setOpen}) {
+function GraphicModal({graphicOpen, setGraphicOpen}) {
   return (
     <div className={style.root}>
         <div className="row1">
             <h1>Курс Центрального Банка</h1>
-            <img src="./assets/img/Крестик.png" onClick={() => setOpen(!open)}/>
+            <img src="./assets/img/Крестик.png" onClick={() => setGraphicOpen(!graphicOpen)}/>
         </div>
         <div className="row2">
             <div className="course">
